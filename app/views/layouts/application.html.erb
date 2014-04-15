@@ -13,8 +13,9 @@
 	<% end %> 
 
     <% if user_signed_in? %>
-       Welcome <%= current_user.fname %>
+       Welcome <%= current_user.fname %> 
 	   <%= link_to "logout", destroy_user_session_path, method: :delete, confirm: "CONFIRM LOGOUT"  %>
+
 	<% end %>
 
   <%= yield %>
