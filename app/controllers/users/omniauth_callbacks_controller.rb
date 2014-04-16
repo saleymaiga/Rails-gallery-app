@@ -23,6 +23,19 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	      session['devise.user_attributes'] = @user.attributes
 	      redirect_to new_user_registration_url
 	    end
-  end
+    end
+
+
+    def google_oauth2
+	    @user = User.find_or_create_for_google_oauth2(request.env['omniauth.auth'])
+	    if @user.persisted?
+	      sign_in_and_redirect @user, :event => :authentication
+	      flash[:notice] = "Signed in successfully"
+	    else
+	      session['devise.user_attributes'] = @user.attributes
+	      redirect_to new_user_registration_url
+	    end
+    end
+
 
 end
