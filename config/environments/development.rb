@@ -24,7 +24,7 @@ GalleryApp::Application.configure do
   :domain => 'google.com',
   :user_name => 'saleymaiga@gmail.com',
   :enable_starttls_auto => true,
-  :password => ENV['PASSWORD'] }
+  :password => ENV['PASSWORD'] } 
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
