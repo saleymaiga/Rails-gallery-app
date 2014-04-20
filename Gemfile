@@ -36,7 +36,6 @@ gem 'devise'
 
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-gem 'omniauth-linkedin'
 gem 'omniauth-google-oauth2'
 
 # Use ActiveModel has_secure_password
