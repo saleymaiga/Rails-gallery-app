@@ -1,0 +1,11 @@
+<h1><%=@artist.fname%>'s Profile</h1>
+
+<p>Location: <%=@artist.location %></p>
+<p>Bio: <%=@artist.bio%></p>
+
+<p>
+	<%= render "artist", artist: @artist %>
+</p>
+
+<%=link_to "Edit", edit_artist_path%>
+<%=link_to "Delete Profile", artist_path(params[:id]), method: :delete %>

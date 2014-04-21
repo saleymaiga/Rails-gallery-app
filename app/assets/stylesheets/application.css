@@ -11,4 +11,7 @@
  *= require_self
  *= require_tree .
  */
+ nav li {
+	display: inline;
+}
 

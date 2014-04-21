@@ -1,0 +1,17 @@
+<div id="artdisplay">
+	First Name: <%=artist.fname%> 
+	<br>
+	Last Name: <%=artist.lname%>
+	<br>
+	Email: <%=artist.email%>
+	<br>
+	Work Title: <%=artist.title%>
+	<br>
+	<%= link_to artist.artpic.url do %>
+		<%= image_tag artist.artpic.url(:thumb) %>
+	<% end %>
+	<br>
+	<%= link_to_unless_current "Artist Profile", artist_path(artist) %>
+	<br>
+	<br>
+</div>
