@@ -38,6 +38,9 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
+#Paperclip
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

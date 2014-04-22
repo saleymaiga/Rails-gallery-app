@@ -36,4 +36,7 @@ GalleryApp::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Allows Paperclip to use ImageMagik 
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
