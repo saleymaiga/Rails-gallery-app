@@ -7,7 +7,13 @@ class User < ActiveRecord::Base
 
   validates :fname, presence: true
   validates :lname, presence: true 
+  validates :role, presence: true 
 
+  ROLES = %w[artist member]
+
+  def role_symbols
+    [role.to_sym]
+  end
 
   def self.find_or_create_for_twitter_oauth(auth)
   	where(auth.slice(:provider, :uid)).first_or_create do |user|
@@ -42,6 +48,11 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
     end
   end
+
+  private
+  # def user_params
+  #   params.require(:user).permit(:fname, :lname, :password, :role)
+  # end
 
 
 end

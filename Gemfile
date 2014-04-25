@@ -40,9 +40,12 @@ gem 'omniauth-google-oauth2'
 
 
 #Paperclip
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip'
 
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+#CanCan
+
+
+gem 'stripe'
 
 
 
