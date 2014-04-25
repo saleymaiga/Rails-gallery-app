@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  private
+  # private
   # def user_params
   #   params.require(:user).permit(:fname, :lname, :password, :role)
   # end

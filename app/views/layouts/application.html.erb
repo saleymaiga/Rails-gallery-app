@@ -7,25 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <ul>
+  <!-- #############  Header ############# -->
+  <header>
+    <div id="logo">Art Gallery App</div>
 
-    <li><%=link_to "Home", root_path%></li>
-    <li><%=link_to "Artists", artists_path%></li>
-    <li><%=link_to "Create Artist", new_artist_path%></li>
+    <div id="usersignedin" > 
+      <% if user_signed_in? %>
+         Welcome, <%= current_user.fname %> 
+       <%= link_to "logout", destroy_user_session_path, method: :delete, data: {confirm: "CONFIRM LOGOUT"}  %>
+      <% end %>
+    </div> 
 
-    </ul>
-  </nav>
+    <div id="flash">
+  	<% flash.each do |key, value| %>
+  	   <%= value %>
+  	<% end %> 
+    </div>
+  </header>
 
-	<% flash.each do |key, value| %>
-	   <%= value %>
-	<% end %> 
+    <nav>
+      <ul>
+        <li><%=link_to "Home", root_path%></li>
+        <li><%=link_to "Sign In", new_user_session_path%></li>
+        <% if current_user && current_user.role == "artist" %>
+        <li><%=link_to "Create Artist", new_artist_path %></li>  
+        <% end %>
+      </ul>
+    </nav>
 
-    <% if user_signed_in? %>
-       Welcome <%= current_user.fname %> 
-	   <%= link_to "logout", destroy_user_session_path, method: :delete, confirm: "CONFIRM LOGOUT"  %>
 
-	<% end %>
 
   <%= yield %>
 

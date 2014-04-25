@@ -1,4 +1,14 @@
 #artdisplay {
 	display: inline-block;
-	margin: 20px;
+	margin: 9px;
+	padding: 10px;
+	background-color: #EBB0AB; /*#FFFEF8;*/
+	border: 2px solid #EBE9E4;
+	box-shadow:2px 2px 3px black;
+	min-width: 275px;
 }
+
+.center {
+	text-align: center;
+}
+

@@ -1,4 +1,4 @@
-<div id="artdisplay">
+<div id="artdisplay" class="center">
 	First Name: <%=artist.fname%> 
 	<br>
 	Last Name: <%=artist.lname%>
@@ -12,6 +12,4 @@
 	<% end %>
 	<br>
 	<%= link_to_unless_current "Artist Profile", artist_path(artist) %>
-	<br>
-	<br>
 </div>

@@ -11,23 +11,34 @@
  *= require_self
  *= require_tree .
  */
- nav li {
+nav li {
 	display: inline;
 }
 
-#flash_notice, #flash_error {
-  padding: 5px 8px;
-  margin: 10px 0;
-  margin-right: 280px;
+body {
+	background-color: #A8A7A4;
+	width: 960px;
+	margin: 0 auto;
 }
 
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+#usersignedin {
+	float: right;
+	font-size: 12px;
+	color: #51D0FF;
 }
 
-#flash_error {
-  background-color: #FCC;
-  border: solid 1px #C66;
+#logo {
+	font-size: 24px;
+	background-color: white;
+	width: 20%;
+	text-align: center;
+	height: 30px;
+}
+
+#flash {
+	font-size: 18px;
+	position: absolute;
+	margin-left: 250px;
+	margin-top: -23px;
 }
 

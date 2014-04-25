@@ -5,11 +5,6 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
 
-  # rescue_from CanCan::AccessDenied do |exception| 
-  #   flash[:error] = "Access denied. Take that!!"
-  #   redirect_to root_url
-  # end
-
   protected
 
   def configure_devise_permitted_parameters
