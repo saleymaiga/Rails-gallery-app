@@ -42,6 +42,7 @@ gem 'omniauth-google-oauth2'
 #Paperclip
 gem "paperclip"
 
+#Stripe
 gem 'stripe'
 
 
