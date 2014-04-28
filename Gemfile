@@ -42,10 +42,17 @@ gem 'omniauth-google-oauth2'
 #Paperclip
 gem 'paperclip'
 
-#CanCan
 
-
+#Stripe
 gem 'stripe'
+
+
+gem 'twitter-bootstrap-rails'
+
+gem "font-awesome-rails"
+
+
+
 
 
 
