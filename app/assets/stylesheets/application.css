@@ -17,6 +17,7 @@
 
 #login {
 	width:500px;
+	height:500px;
 	margin-left: 11em;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2),  
                 0 1px 1px rgba(0, 0, 0, .2),
@@ -48,10 +49,11 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color: #666;
-    margin: 5px 0 30px 0;
+    margin: 5px 0em 30px 0;
     letter-spacing: 4px;
     font: normal 26px/1 Verdana, Helvetica;
     position: relative;
+    padding-top: 0.1em;
 }
 
 #username{
