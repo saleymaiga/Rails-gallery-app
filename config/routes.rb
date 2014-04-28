@@ -7,7 +7,7 @@ GalleryApp::Application.routes.draw do
   get "charges/new"
   get "charges/create"
   
-  root to: "home#index"
+  root to: "artists#index"
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 
   resources :charges

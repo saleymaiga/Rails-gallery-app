@@ -1,5 +1,6 @@
 <%= form_for @artist, html: {multipart: true}  do |f| %> 
-  <div>
+  <div id="artdisplay">
+    <% if current_user.role == "artist" %>
     <%=f.label :fname, "First Name" %>
     <%=f.text_field :fname %>
     <br>
@@ -21,6 +22,11 @@
     <%=f.label :artpic, "Art Upload"%>
     <%=f.file_field :artpic %>
     <br>
-    <%=f.submit :submit %>
+    <%=f.submit :submit, data: {disable_with: "Submitting..."} %>
+    <% else current_user.role == nil%>
+        <script type="text/javascript">
+            window.location.href="/users/sign_up"  
+        </script>
+    <% end %>
   </div>  
 <% end %>
