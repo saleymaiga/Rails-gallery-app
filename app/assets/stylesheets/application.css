@@ -15,3 +15,72 @@
 	display: inline;
 }
 
+#login {
+	width:500px;
+	margin-left: 11em;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2),  
+                0 1px 1px rgba(0, 0, 0, .2),
+                0 3px 0 #fff,
+                0 4px 0 rgba(0, 0, 0, .2),
+                0 6px 0 #fff,  
+                0 7px 0 rgba(0, 0, 0, .2);
+}
+
+#login {
+    position: absolute;
+    z-index: 0;
+}
+
+#login:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+h1 {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #666;
+    margin: 5px 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+}
+
+#username{
+	font: normal 20px/1 Verdana, Helvetica;
+	width:350px;
+	border: 3px solid #ccc;
+	color: #666;
+	padding:0.3em;
+	margin-left: 1em;
+	border-radius:10px;
+
+}
+
+h1:after, 
+h1:before {
+    background-color: #777;
+    content: "";
+    height: 2px;
+    position: absolute;
+    top: 15px;
+    width: 100px;
+    margin: 0 1em 0 1em ;  
+}
+
+h1:after {      
+    right: 0;
+}
+
+h1:before {
+    background-image: linear-gradient(right, #777, #fff);
+    left: 0;
+}
