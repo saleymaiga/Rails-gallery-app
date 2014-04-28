@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require font-awesome
  */
  nav li {
 	display: inline;
@@ -31,6 +32,9 @@
     position: absolute;
     z-index: 0;
 }
+.inputs{
+    margin-top: 3em;
+}
 
 #login:before {
     content: '';
@@ -50,6 +54,7 @@ h1 {
     text-align: center;
     color: #666;
     margin: 5px 0em 30px 0;
+    margin-top: 2em;
     letter-spacing: 4px;
     font: normal 26px/1 Verdana, Helvetica;
     position: relative;
@@ -88,11 +93,7 @@ h1:before {
 }
 #login_submit{
 	float:right;
-	font: normal 26px/1 Verdana, Helvetica;
-	color:#8B4513;
-	margin: 0 2em 1em 0;
-	background-color:#FF9900;
-	border-radius: 10px;
+	margin-right: 4em;
 }
 #remember_me{
 	font: normal 15px/1 Verdana, Helvetica;
@@ -100,8 +101,45 @@ h1:before {
 	font-weight: bold;
 }
 #remember_btn{
-	margin:1em 0 0 4.5em ;
+	margin:0 0 0 3.5em ;
 }
+.social_media_button{
+    color:#fff;
+    
+}
+.social_media_button:visited{
+    text-decoration: none;
+}
+.social_media_button:hover{
+    text-decoration: none;
+    color:#fff;
+}
+.btn-facebook, .btn-twitter, .btn-google-plus{
+    width:185px;
+}
+.btn-twitter{
+    margin-left: 3.5em;
+    margin-right: 2em;
+}
+.btn-google-plus{
+    margin-left: 11em;
+    margin-top: 2em;
+    margin-bottom: em;
+}
+.Or_seperate{
+    text-shadow: 0 -5px 5px rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+    padding-top: 0.1em;
+}
+.forgot_password{
+    margin-left:3.5em;
+    margin-right: 5em;
+}
+
 
 
 
