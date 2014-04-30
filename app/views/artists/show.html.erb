@@ -1,12 +1,14 @@
-<h1><%=@artist.fname%>'s Profile</h1>
+<h1><%=@artist.fname%> <%=@artist.lname%>'s Profile</h1>
 
-<div>
+<div id="box">
 	<p>Location: <%=@artist.location %></p>
 	<p>Bio: <%=@artist.bio%></p>
 	<%= render "artist", artist: @artist %>
 </div>
 
-<% if current_user.role == "artist" %> 
-<%=link_to "Edit", edit_artist_path%>
-<%=link_to "Delete Profile", artist_path(params[:id]), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
+<% if current_user && current_user.role == "artist" %> 
+	<%=link_to "Edit", edit_artist_path%>
+	<%=link_to "Delete Profile", artist_path(params[:id]), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
+<% else %>
+	<%=link_to "Back", root_path %>
 <% end %>
