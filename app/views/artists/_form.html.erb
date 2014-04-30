@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if current_user.role == "artist" %>    
     <%= form_for @artist, html: {multipart: true}  do |f| %> 
       <div id="artdisplay">
@@ -24,5 +25,36 @@
         <br>
         <%=f.submit :submit, data: {disable_with: "Submitting..."} %>
       </div>     
+=======
+<%= form_for @artist, html: {multipart: true}  do |f| %> 
+  <div id="">
+    <% if current_user.role == "artist" %>
+    <%=f.label :fname, "First Name" %>
+    <%=f.text_field :fname %>
+    <br>
+    <%=f.label :lname, "Last Name" %>
+    <%=f.text_field :lname %>
+    <br>
+    <%=f.label :email, "Email" %>
+    <%=f.text_field :email %>
+    <br>
+    <%=f.label :location, "Location"%>
+    <%=f.text_field :location%>
+    <br>
+    <%=f.label :bio, "Bio"%>
+    <%=f.text_area :bio%>
+    <br>
+    <%=f.label :title, "Work Title"%>
+    <%=f.text_field :title%>
+    <br>
+    <%=f.label :artpic, "Art Upload"%>
+    <%=f.file_field :artpic %>
+    <br>
+    <%=f.submit :submit, data: {disable_with: "Submitting..."} %>
+    <% else current_user.role == nil%>
+        <script type="text/javascript">
+            window.location.href="/users/sign_up"  
+        </script>
+>>>>>>> a5776991b04cbfc93da512a5ddd6ea9262f8d0d8
     <% end %>
 <% end %>
