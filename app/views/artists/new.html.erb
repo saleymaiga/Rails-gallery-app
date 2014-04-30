@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<% if current_user.role == "artist" %> 
-	<h1>Create New Artist</h1>
-=======
-<h2>Create New Artist</h2>
->>>>>>> a5776991b04cbfc93da512a5ddd6ea9262f8d0d8
 
+<% if current_user.role == "artist" %> 
+    <h2>Create New Artist</h2>
 	<%=render "form", artist: @artist %>
 <% end %>

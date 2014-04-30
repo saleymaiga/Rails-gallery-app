@@ -16,7 +16,4 @@
 //= require turbolinks
 //= require_tree .
 
-<<<<<<< HEAD
-//= require my_js
-=======
->>>>>>> a5776991b04cbfc93da512a5ddd6ea9262f8d0d8
+
