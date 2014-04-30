@@ -45,7 +45,7 @@ body {
 
 #login {
 	width:500px;
-	height:500px;
+	height:520px;
 	margin-left: 11em;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2),  
                 0 1px 1px rgba(0, 0, 0, .2),
@@ -97,7 +97,38 @@ h1 {
 	margin-left: 2.5em;
 	border-radius:10px;
 
-}  
+}
+#first_name{
+    font: normal 20px/1 Verdana, Helvetica;
+    width:170px;
+    border: 3px solid #ccc;
+    color: #666;
+    padding:0.3em;
+    margin-left: 2.5em;
+    border-radius:10px;
+
+} 
+#last_name{
+    font: normal 20px/1 Verdana, Helvetica;
+    width:180px;
+    border: 3px solid #ccc;
+    color: #666;
+    padding:0.3em;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    border-radius:10px;
+} 
+.role{
+    margin-left: 2.7em;
+    margin-top:0.5em;
+    font: normal 18px/1 Verdana, Helvetica;
+}
+.role_checkbox {
+    font: normal 20px/1 Verdana, Helvetica;
+    width:170px;
+    margin-left: 2.4em
+
+}
 
 h1:after, 
 h1:before {
