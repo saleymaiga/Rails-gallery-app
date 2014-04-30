@@ -5,11 +5,15 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.where(id: params[:id]).first
+      @artist = Artist.where(id: params[:id]).first
   end
 
   def new
-    @artist = Artist.new
+    if current_user
+      @artist = Artist.new
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   def create
@@ -27,7 +31,11 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    @artist = Artist.find(params[:id])
+     if current_user
+      @artist = Artist.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def update  #process data and update artist record 

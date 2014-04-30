@@ -28,7 +28,7 @@
     <nav>
       <ul>
         <li><%=link_to "Home", root_path%></li>
-        <li><%=link_to "Sign In", new_user_session_path%></li>
+        <li><%= link_to  'Sign In', new_user_registration_path%></li>
         <% if current_user && current_user.role == "artist" %>
         <li><%=link_to "Create Artist", new_artist_path %></li>  
         <% end %>
