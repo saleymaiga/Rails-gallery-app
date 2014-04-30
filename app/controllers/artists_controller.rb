@@ -19,13 +19,13 @@ class ArtistsController < ApplicationController
   def create
     @artist = Artist.new(artist_params)
 
-    if @artist.save!
+    if @artist.save
       flash[:notice] = "Your account was created
       successfully."
       redirect_to artists_path
     else
-      flash[:alert] = "There was a problem saving your
-      account."
+      flash[:alert] = " There was a problem saving your
+      account. "
       redirect_to new_artist_path
     end
   end

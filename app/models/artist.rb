@@ -6,4 +6,14 @@ class Artist < ActiveRecord::Base
 		} # #= cropped exactly, >= no side will be longer than another, not exact crops
 
 	validates_attachment_content_type :artpic, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+	validates :fname, presence: true
+    validates :lname, presence: true 
+    validates :email, presence: true 
+    validates :bio, presence: true
+    validates :title, presence: true
+    validates :location, presence:true
+
+
+
 end

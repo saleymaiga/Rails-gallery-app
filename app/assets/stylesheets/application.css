@@ -39,9 +39,10 @@ body {
 #flash {
 	font-size: 18px;
 	position: absolute;
-	margin-left: 250px;
-	margin-top: -23px;
+	margin-left: 25em;
+	margin-top: -1.1em;
 }
+
 
 #login {
 	width:500px;
@@ -212,6 +213,7 @@ h1:before {
 .sign_in_link{
     margin-right: 1em;
 }
+
 
 
 

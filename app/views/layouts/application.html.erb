@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- #############  Header ############# -->
+  <!-- #############  Navigation bar ############# -->
     
   <div class="navbar navbar-inverse ">
   <div class="navbar-inner">
@@ -25,6 +25,9 @@
           <li><%= link_to "Artists" %></li>
           <li><%= link_to "Gallery" %></li>
           <li></li>
+          <% if current_user && current_user.role == "artist" %>
+            <li><%=link_to "Create new art", new_artist_path %></li>  
+          <% end %>
         </ul>
         
         <% if user_signed_in? %>
@@ -44,6 +47,17 @@
     </div>
   </div>
 </div>
+
+   <!-- ############# End of navigation bar ############# -->
+
+    <div id="flash">
+      <% flash.each do |key, value| %>
+         <div class="btn btn-inverse btn-block">
+         <%= " |" + value + " |"%>
+         </div>
+    
+      <% end %>
+    </div>
 
 
   <!-- <header>
