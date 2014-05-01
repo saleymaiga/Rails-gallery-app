@@ -219,7 +219,10 @@ h1:before {
 .sign_in_link{
     margin-right: 1em;
 }
-
+#password_reset{
+    font: normal 20px/1 Verdana, Helvetica;
+    margin-left: 2em;
+}
 
 
 
