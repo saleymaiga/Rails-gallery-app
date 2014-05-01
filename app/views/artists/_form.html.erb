@@ -2,27 +2,31 @@
 <% if current_user.role == "artist" %>    
     <%= form_for @artist, html: {multipart: true}  do |f| %> 
       <div>
-        <%=f.label :fname, "First Name" %>
-        <%=f.text_field :fname %>
+        
+        First Name <%=f.text_field :fname %>
         <br>
-        <%=f.label :lname, "Last Name" %>
-        <%=f.text_field :lname %>
+        
+        Last Name  <%=f.text_field :lname %>
         <br>
-        <%=f.label :email, "Email" %>
-        <%=f.text_field :email %>
+
+        Email  <%=f.text_field :email %>
         <br>
-        <%=f.label :location, "Location"%>
-        <%=f.text_field :location%>
+        
+        Location <%=f.text_field :location%>
         <br>
-        <%=f.label :bio, "Bio"%>
-        <%=f.text_field :bio%>
+
+        
+        Work Title <%=f.text_field :title%>
         <br>
-        <%=f.label :title, "Work Title"%>
-        <%=f.text_field :title%>
+        
+        Bio <%=f.text_field :bio%>
         <br>
-        <%=f.label :artpic, "Art Upload"%>
-        <%=f.file_field :artpic %>
+
         <br>
+        
+        Art Upload <%=f.file_field :artpic %>
+        <br>
+        
         <%=f.submit :submit, data: {disable_with: "Submitting..."} %>
       </div>    
 
