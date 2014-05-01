@@ -3,7 +3,7 @@
     <%= form_for @artist, html: {multipart: true}  do |f| %> 
       <div>
         
-        First Name <%=f.text_field :fname %>
+        First Name  <%=f.text_field :fname %>
         <br>
         
         Last Name  <%=f.text_field :lname %>
@@ -19,14 +19,14 @@
         Work Title <%=f.text_field :title%>
         <br>
         
-        Bio <%=f.text_field :bio%>
+        Bio <%=f.text_area :bio%>
         <br>
 
         <br>
         
         Art Upload <%=f.file_field :artpic %>
         <br>
-        
+
         <%=f.submit :submit, data: {disable_with: "Submitting..."} %>
       </div>    
 
