@@ -17,6 +17,7 @@ span {
 }
 #artist {
 	margin-left: 20em;
+	margin-top: 4em;
 	font: normal 18px/1 Verdana, Helvetica;
 }
 .file_field{
@@ -25,7 +26,10 @@ span {
 }
 #artist_submit_button{
 	width:220px;
+	margin-bottom: 10em;
 }
 .create_new_art{
 	float:left;
+	margin-top: 1.5em;
+	margin-left: 1em;
 }

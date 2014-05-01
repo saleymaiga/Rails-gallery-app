@@ -17,8 +17,6 @@ nav li {
 }
 
 body {
-	
-	
 	margin: 0 auto;
 }
 
@@ -39,22 +37,23 @@ body {
 #flash {
 	font-size: 18px;
 	position: absolute;
-	margin-left: 25em;
+	margin-left: 30em;
 	margin-top: -1.1em;
 }
 .alert{
     width:350px;
 }
 .alert-block{
-    margin-left: 25em;
+    margin-left: 28em;
 }
 
 
 #login {
 	width:500px;
 	height:520px;
-	margin-left: 25em;
+	margin-left: 27em;
     margin-top: 2em;
+    margin-bottom: 10em;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2),  
                 0 1px 1px rgba(0, 0, 0, .2),
                 0 3px 0 #fff,
