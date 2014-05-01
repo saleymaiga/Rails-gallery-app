@@ -1,34 +1,34 @@
-
+<div id="artist">
 <% if current_user.role == "artist" %>    
     <%= form_for @artist, html: {multipart: true}  do |f| %> 
       <div>
         
-        First Name  <%=f.text_field :fname %>
+        <div class="artist_input">First Name</div><%=f.text_field :fname %>
         <br>
         
-        Last Name  <%=f.text_field :lname %>
+        <div class="artist_input">Last Name</div><%=f.text_field :lname %>
         <br>
 
-        Email  <%=f.text_field :email %>
+        <div class="artist_input">Email </div><%=f.text_field :email %>
         <br>
         
-        Location <%=f.text_field :location%>
+        <div class="artist_input">Location</div> <%=f.text_field :location%>
         <br>
 
         
-        Work Title <%=f.text_field :title%>
+        <div class="artist_input">Work Title</div> <%=f.text_field :title%>
         <br>
         
-        Bio <%=f.text_area :bio%>
+        <div class="artist_input">Bio</div> <%=f.text_area :bio, :rows=> "5" %>
         <br>
-
         <br>
         
-        Art Upload <%=f.file_field :artpic %>
-        <br>
+        <%=f.file_field :artpic, :class=>"file_field" %><br>
 
-        <%=f.submit :submit, data: {disable_with: "Submitting..."} %>
+        <%=f.submit :submit,:value=>"Submit",:class=>"btn btn-inverse btn-block", data: {disable_with: "Submitting..."}, :id=>"artist_submit_button" %>
       </div>    
 
     <% end %>
 <% end %>
+</div>
+

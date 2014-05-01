@@ -13,5 +13,19 @@
 }
 
 span {
-	float: right;
+	float: left;
+}
+#artist {
+	margin-left: 20em;
+	font: normal 18px/1 Verdana, Helvetica;
+}
+.file_field{
+	font: normal 15px/1 Verdana, Helvetica;
+
+}
+#artist_submit_button{
+	width:220px;
+}
+.create_new_art{
+	float:left;
 }

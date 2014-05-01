@@ -10,83 +10,55 @@
   <!-- #############  Navigation bar ############# -->
     
   <div class="navbar navbar-inverse ">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-     
-      <%=link_to image_tag('/assets/images/logo.png', ),root_path, :class=>"brand" %>
-      <div class="nav-collapse navbar-right"> 
-        <ul class="nav">
-          <li><%= link_to "Home" %></li>
-          <li><%= link_to "Artists" %></li>
-          <li><%= link_to "Gallery" %></li>
-          <li></li>
-          <% if current_user && current_user.role == "artist" %>
-            <li><%=link_to "Create new art", new_artist_path %></li>  
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+       
+        <%=link_to image_tag('/assets/images/logo.png', ),root_path, :class=>"brand" %>
+        <div class="nav-collapse navbar-right"> 
+          <ul class="nav">
+            <li><%= link_to "Home" %></li>
+            <li><%= link_to "Artists" %></li>
+            <li><%= link_to "Gallery" %></li>
+            <li></li>
+            <% if current_user && current_user.role == "artist" %>
+              <li><%=link_to "Create new art", new_artist_path %></li>  
+            <% end %>
+          </ul>
+          
+          <% if user_signed_in? %>
+            <ul class="nav pull-right">
+               <li><span class="welcome_user">Welcome, <%= current_user.fname %></span></li>
+               <li><%= link_to "logout", destroy_user_session_path, method: :delete, data: {confirm: "CONFIRM LOGOUT"}  %></li>
+            </ul>
           <% end %>
-        </ul>
-        
-        <% if user_signed_in? %>
-          <ul class="nav pull-right">
-             <li><span class="welcome_user">Welcome, <%= current_user.fname %></span></li>
-             <li><%= link_to "logout", destroy_user_session_path, method: :delete, data: {confirm: "CONFIRM LOGOUT"}  %></li>
-          </ul>
-        <% end %>
 
-        <% unless user_signed_in? %>
-          <ul class="nav pull-right">
-             <li><%= link_to "Sign in", new_user_session_path, :class=>"sign_in_link"%></li>
-          </ul>
-        <% end %>
+          <% unless user_signed_in? %>
+            <ul class="nav pull-right">
+               <li><%= link_to "Sign in", new_user_session_path, :class=>"sign_in_link"%></li>
+            </ul>
+          <% end %>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
+
 
    <!-- ############# End of navigation bar ############# -->
 
-    <div id="flash">
-      <% flash.each do |key, value| %>
-         <div class="btn btn-inverse btn-block">
-         <%= "| " + value + " |"%>
-         </div>
-    
-      <% end %>
-    </div>
-
-
-  <!-- <header>
-    <div id="logo">Art Gallery App</div>
-
-    <div id="usersignedin" > 
-      <% if user_signed_in? %>
-         Welcome, <%= current_user.fname %> 
-         <%= link_to "logout", destroy_user_session_path, method: :delete, data: {confirm: "CONFIRM LOGOUT"}  %>
-      <% end %>
-    </div> 
-
-    <div id="flash">
-    	<% flash.each do |key, value| %>
-    	   <%= value %>
-    	<% end %> 
-    </div>
-  </header>
-
-    <nav>
-      <ul>
-        <li><%=link_to "Home", root_path%></li>
-        <li><%= link_to  'Sign In', new_user_registration_path%></li>
-        <% if current_user && current_user.role == "artist" %>
-        <li><%=link_to "Create Artist", new_artist_path %></li>  
-        <% end %>
-      </ul>
-    </nav>  -->
-
+  <div id="flash">
+    <% flash.each do |key, value| %>
+       <div class="btn btn-inverse btn-block">
+       <%= "| " + value + " |"%>
+       </div>
+  
+    <% end %>
+  </div>
 
 
   <%= yield %>
