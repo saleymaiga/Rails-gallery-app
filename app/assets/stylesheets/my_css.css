@@ -15,6 +15,14 @@
 span {
 	float: left;
 }
+
+section:hover {
+	-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	position: relative;
+	z-index: 5;
+}
+
 #artist {
 	margin-left: 20em;
 	margin-top: 4em;
