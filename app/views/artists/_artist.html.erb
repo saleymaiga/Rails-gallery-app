@@ -1,5 +1,3 @@
-
-
 <section id="artdisplay" class="center">
 	First Name: <%=artist.fname%> 
 	<br>
@@ -16,6 +14,21 @@
 	<%= link_to_unless_current "Artist Profile", artist_path(artist) %>
 	<% if current_user && current_user.role == "member" %>
 		<span><%= link_to image_tag("icon_checkout.gif"), charges_path %></span>
+
+		<%= form_tag charges_path do %>
+		  <article>
+		    <label class="amount">
+		      <span>Amount: <%= number_to_currency(artist.price.to_i/100) %></span>
+		    </label>
+		  </article>
+
+		  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+		          data-description="This great piece of art!"
+		          data-amount="<%= artist.price %>"></script>
+
+ <% end %>
+
 	<% else %>
     	<span><%= link_to image_tag("icon_checkout.gif"), new_user_registration_path %></span>	
 	<% end %>

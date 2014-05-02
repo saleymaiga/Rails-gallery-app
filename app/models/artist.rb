@@ -1,4 +1,5 @@
 class Artist < ActiveRecord::Base
+	# before_save :price*100
 	has_attached_file :artpic,
 		:styles => { 
 		:medium => "300x300>", 
@@ -13,7 +14,8 @@ class Artist < ActiveRecord::Base
     validates :bio, presence: true
     validates :title, presence: true
     validates :location, presence:true
+    validates :price, presence: true
 
-
+    validates :price, :numericality => {:only_integer => true}
 
 end
