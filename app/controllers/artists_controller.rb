@@ -20,8 +20,8 @@ class ArtistsController < ApplicationController
     @artist = Artist.new(artist_params)
 
     if @artist.save
-      flash[:notice] = "Your account was created
-      successfully."
+      flash[:notice] = " Your account was created
+      successfully. "
       redirect_to artists_path
     else
       flash[:alert] = " There was a problem saving your
@@ -41,12 +41,12 @@ class ArtistsController < ApplicationController
   def update  #process data and update artist record 
     @artist = Artist.where(id: params[:id]).first 
     if @artist.update_attributes(artist_params)
-      flash[:notice] = "Your account was updated
-      successfully."
+      flash[:notice] = " Your account was updated
+      successfully. "
       redirect_to artist_path(@artist) 
     else
-      flash[:alert] = "There was a problem saving your
-      account."
+      flash[:alert] = " There was a problem saving your
+      account. "
       redirect_to new_artist_path #or :back to go back to where u just came from 
     end
   end
@@ -54,9 +54,9 @@ class ArtistsController < ApplicationController
   def destroy
     @artist = Artist.where(id: params[:id]).first#.destroy
     if @artist && @artist.destroy
-      flash[:notice] = "Artist #{@artist.fname} #{@artist.lname} deleted successfully!"
+      flash[:notice] = " Artist #{@artist.fname} #{@artist.lname} deleted successfully! "
     else
-      flash[:alert] = "there was a problem destroying #{@artist.fname}"
+      flash[:alert] = " There was a problem destroying #{@artist.fname} "
     end
     redirect_to root_path
   end
