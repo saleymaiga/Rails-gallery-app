@@ -8,7 +8,7 @@
 	Work Title: <%=artist.title%>
 	<br>
 	<%= link_to artist.artpic.url do %>
-		<%= image_tag artist.artpic.url(:thumb) %>
+		<%= image_tag artist.artpic.url(:thumb), size: "200x200"%>
 	<% end %>
 	<br>
 	<%= link_to_unless_current "Artist Profile", artist_path(artist) %>
@@ -18,14 +18,15 @@
 		<%= form_tag charges_path do %>
 		  <article>
 		    <label class="amount">
-		      <span>Amount: <%= number_to_currency(artist.price.to_i/100) %></span>
+		      <span>Amount: <%= number_to_currency(artist.price.to_f) %></span>
 		    </label>
 		  </article>
 
 		  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 		          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
 		          data-description="This great piece of art!"
-		          data-amount="<%= artist.price %>"></script>
+		          data-amount=<%= artist.price.to_f*100%>>
+		  </script>
 
  <% end %>
 

@@ -23,6 +23,7 @@ class ChargesController < ApplicationController
   )
   if charge.save
     redirect_to root_path
+    flash[:notice] = "Thank You. Your payment was sent successfully"
   end
 
 	rescue Stripe::CardError => e
