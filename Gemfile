@@ -4,7 +4,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+ gem 'sqlite3'
+end
+
+group :production do
+ gem 'pg'
+ gem 'rails_12factor'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -53,7 +60,10 @@ gem "font-awesome-rails"
 
 
 
-
+group :production do
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
 
 
 # Use ActiveModel has_secure_password
