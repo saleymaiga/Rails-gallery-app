@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag '/favicon.ico?1' %>
 </head>
 <body>
   <!-- #############  Navigation bar ############# -->
@@ -22,7 +23,7 @@
         <div class="nav-collapse navbar-right"> 
           <ul class="nav">
             <li><%= link_to "Home" %></li>
-            <li><%= link_to "Artists" %></li>
+            <li><%= link_to "Art Works" %></li>
             <li><%= link_to "Gallery" %></li>
             <li></li>
             <% if current_user && current_user.role == "artist" %>
