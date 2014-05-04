@@ -17,8 +17,7 @@ nav li {
 }
 
 body {
-    height: 1200px;
-	margin: 0 auto;
+    padding-bottom: 10em;
 }
 
 #usersignedin {
@@ -29,8 +28,7 @@ body {
 
 #logo {
 	font-size: 24px;
-	/*background-color: white;*/
-	width: 20%;
+	width: 20px;
 	text-align: center;
 	height: 30px;
 }
@@ -40,12 +38,15 @@ body {
 	position: absolute;
 	margin-left: 30em;
 	margin-top: -1.1em;
+
 }
 .alert{
     width:350px;
+
 }
 .alert-block{
     margin-left: 28em;
+
 }
 
 
@@ -224,6 +225,8 @@ h1:before {
     font: normal 20px/1 Verdana, Helvetica;
     margin-left: 2em;
 }
+
+
 
 
 

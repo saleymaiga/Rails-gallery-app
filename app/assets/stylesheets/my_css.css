@@ -1,13 +1,28 @@
 #artdisplay {
 	display: inline-block;
 	margin: 10px;
+	margin-bottom: 1em;
+	margin-left: 5em;
+	margin-top: 2em;
 	border: 3px solid lightgrey;
 	border-radius: 10px;
-	min-width: 275px;
+	/*min-width: 275px;*/
 	vertical-align: top;
-	height:300px;
-	width:250px;
+	height:270px;
+	width:300px;
 
+}
+.amount{
+	font-weight: bold;
+	margin-left: 1em;
+	clear:both;
+}
+.stripe{
+	float:right;
+	margin-right:0.5em;
+}
+.artist_profile_link{
+	text-align: center;
 }
 
 .center {
@@ -18,9 +33,9 @@ span {
 	float: left;
 }
 
-section:hover {
-	-webkit-transform: scale(1.25);
-	-moz-transform: scale(1.25);
+.art_pic:hover {
+	-webkit-transform: scale(1.75);
+	-moz-transform: scale(1.50);
 	position: relative;
 	z-index: 5;
 }
@@ -54,4 +69,8 @@ section:hover {
 	width: 234px;
 	padding: 29px;
 }
+.Art_pic_header{
+	font: Verdana, Helvetica;
+}
+
 
