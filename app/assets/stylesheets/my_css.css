@@ -72,5 +72,39 @@ span {
 .Art_pic_header{
 	font: Verdana, Helvetica;
 }
+.box{
+	float: left;
+	width: 250px;
+	margin-top: 2em;
+	margin-left: 1em
+}
+.back-button{
+	margin-left:1em;
+	clear: both;
+	float: left;
+	margin-top:2em;
+}
+.edit_button{
+	margin-left:1em;
+	clear: both;
+	float: left;
+}
+.delete_profile{
+	text-decoration: none;
+	color:white;
+	margin-left:0.3em
+}
+.delete_profile:hover{
+	text-decoration: none;
+	color:white;
+}
+.delete_button{
+	float:left;
+	margin-left: 1em;
+
+}
+.profile_header{
+	margin-left: 0.5em;
+}
 
 
