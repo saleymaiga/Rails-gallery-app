@@ -18,6 +18,7 @@ nav li {
 
 body {
     padding-bottom: 10em;
+    max-width:1300px;
 }
 
 #usersignedin {
