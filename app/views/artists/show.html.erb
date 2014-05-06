@@ -14,9 +14,12 @@
 	<%=link_to " Edit", edit_artist_path, :class=>"btn btn-inverse icon-pencil edit_button" %>
 	</div>
 
-	<button class="btn btn-danger delete_button" type="button"><i class="icon-warning-sign"></i><%=link_to " Delete Profile", artist_path(params[:id]), method: :delete, data: {confirm: "Are you sure you want to delete your profile?"}, :class=>"delete_profile"  %>
-	</button>
+	  <%=link_to " Delete Profile", artist_path(params[:id]), method: :delete, confirm: "Are you sure you want to delete your profile?", :class=>"delete_profile", :class=>"btn btn-danger delete_button" %>
+	
 
 <% else %>
 	<%=link_to "Back", root_path, :class=>"btn btn-inverse back-button" %>
 <% end %>
+
+
+
