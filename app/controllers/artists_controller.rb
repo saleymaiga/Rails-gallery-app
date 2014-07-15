@@ -61,6 +61,10 @@ class ArtistsController < ApplicationController
     redirect_to root_path
   end
 
+  def contact
+    
+  end
+
   private 
   def artist_params 
     params.require(:artist).permit(:id, :fname, :lname, :email, :location, :title, :bio, :artpic, :artist_id, :price)

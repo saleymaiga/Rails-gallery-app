@@ -2,7 +2,7 @@ GalleryApp::Application.routes.draw do
 
   resources :artists
 
-
+  get '/contact' => 'artists#contact'
   get "charges/index"
   get "charges/new"
   get "charges/create"
@@ -12,7 +12,7 @@ GalleryApp::Application.routes.draw do
 
   resources :charges
  
-
+ 
 
 
   # The priority is based upon order of creation: first created -> highest priority.

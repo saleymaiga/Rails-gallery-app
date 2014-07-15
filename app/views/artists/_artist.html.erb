@@ -35,18 +35,13 @@
 				          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
 				          data-description="Great piece of art!"
 				          data-name="Art Gallery"
-				          data-amount=<%= artist.price.to_f*100%>>
-
+				          data-amount=<%=artist.price.to_f*100%>>
 				  </script>
 				  <div>
 
 	        <% end %>
 
 	    <% end %>
-
-
-	
-
 		
 </section>
 
